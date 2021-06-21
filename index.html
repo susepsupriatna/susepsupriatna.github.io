@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tes</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
+	<style>
+		body{
+			background-color: #000000;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.ml4 {
+		  font-size: 18px;
+		  font-weight: 600;
+		  color: #ffffff;
+		}
+		.ml4 .letters {
+		  position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="ml4">
+	  <span class="letters letters-1">Hi there</span>
+	  <span class="letters letters-2">My name is Susep Supriatna</span>
+	  <span class="letters letters-3">Thanks!</span>
+	</h1>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script>
+		var ml4 = {};
+		ml4.opacityIn = [0,1];
+		ml4.scaleIn = [0.2, 1];
+		ml4.scaleOut = 3;
+		ml4.durationIn = 800;
+		ml4.durationOut = 600;
+		ml4.delay = 500;
+
+		anime.timeline({loop: true})
+		  .add({
+		    targets: '.ml4 .letters-1',
+		    opacity: ml4.opacityIn,
+		    scale: ml4.scaleIn,
+		    duration: ml4.durationIn
+		  }).add({
+		    targets: '.ml4 .letters-1',
+		    opacity: 0,
+		    scale: ml4.scaleOut,
+		    duration: ml4.durationOut,
+		    easing: "easeInExpo",
+		    delay: ml4.delay
+		  }).add({
+		    targets: '.ml4 .letters-2',
+		    opacity: ml4.opacityIn,
+		    scale: ml4.scaleIn,
+		    duration: ml4.durationIn
+		  }).add({
+		    targets: '.ml4 .letters-2',
+		    opacity: 0,
+		    scale: ml4.scaleOut,
+		    duration: ml4.durationOut,
+		    easing: "easeInExpo",
+		    delay: ml4.delay
+		  }).add({
+		    targets: '.ml4 .letters-3',
+		    opacity: ml4.opacityIn,
+		    scale: ml4.scaleIn,
+		    duration: ml4.durationIn
+		  }).add({
+		    targets: '.ml4 .letters-3',
+		    opacity: 0,
+		    scale: ml4.scaleOut,
+		    duration: ml4.durationOut,
+		    easing: "easeInExpo",
+		    delay: ml4.delay
+		  }).add({
+		    targets: '.ml4',
+		    opacity: 0,
+		    duration: 500,
+		    delay: 500
+		  });
+	</script>
+</body>
+</html>
